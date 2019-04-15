@@ -144,7 +144,7 @@ public final class CSolve extends IBaseAction
         p_return.add( CRawTerm.of( l_result.getPoint().length ) );
         Arrays.stream( l_result.getPoint() ).boxed().map( CRawTerm::of ).forEach( p_return::add );
 
-        return Stream.of();
+        return Stream.empty();
     }
 
 }

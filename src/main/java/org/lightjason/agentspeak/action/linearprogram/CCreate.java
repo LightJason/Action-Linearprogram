@@ -99,7 +99,7 @@ public final class CCreate extends IBaseAction
             )
         ) );
 
-        return Stream.of();
+        return Stream.empty();
     }
 
 }

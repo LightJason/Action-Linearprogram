@@ -141,7 +141,7 @@ public final class CEquationConstraint extends IConstraint
             )
         );
 
-        return Stream.of();
+        return Stream.empty();
     }
 
 }

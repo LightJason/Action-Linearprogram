@@ -105,7 +105,7 @@ public final class CValueConstraint extends IConstraint
             )
         );
 
-        return Stream.of();
+        return Stream.empty();
     }
 
 }
