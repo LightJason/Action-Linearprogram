@@ -56,8 +56,8 @@ import java.util.stream.Stream;
  *
  * {@code .math/linearprogram/equationconstraint( LP, [2,7,[7,12,[19]]], "<", [1,2],3,5 );}
  *
- * @see https://en.wikipedia.org/wiki/Linear_programming
- * @see http://commons.apache.org/proper/commons-math/userguide/optimization.html
+ * @see <a href="https://en.wikipedia.org/wiki/Linear_programming"></a>
+ * @see <a href="http://commons.apache.org/proper/commons-math/userguide/optimization.html"></a>
  */
 public final class CEquationConstraint extends IConstraint
 {

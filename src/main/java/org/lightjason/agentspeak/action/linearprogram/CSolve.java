@@ -69,8 +69,8 @@ import java.util.stream.Stream;
  *
  * {@code [Value|CountXi|Xi] = .math/linearprogram/solve( LP, "maximize", "non-negative" );}
  *
- * @see https://en.wikipedia.org/wiki/Linear_programming
- * @see http://commons.apache.org/proper/commons-math/userguide/optimization.html
+ * @see <a href="https://en.wikipedia.org/wiki/Linear_programming"></a>
+ * @see <a href="http://commons.apache.org/proper/commons-math/userguide/optimization.html"></a>
  */
 public final class CSolve extends IBaseAction
 {

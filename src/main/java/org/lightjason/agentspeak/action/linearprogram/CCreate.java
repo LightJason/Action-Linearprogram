@@ -51,8 +51,8 @@ import java.util.stream.Stream;
  *
  * {@code LP = .math/linearprogram/create(1,2, [3, [4,5]], 10);}
  *
- * @see https://en.wikipedia.org/wiki/Linear_programming
- * @see http://commons.apache.org/proper/commons-math/userguide/optimization.html
+ * @see <a href="https://en.wikipedia.org/wiki/Linear_programming"></a>
+ * @see <a href="http://commons.apache.org/proper/commons-math/userguide/optimization.html"></a>
  */
 public final class CCreate extends IBaseAction
 {

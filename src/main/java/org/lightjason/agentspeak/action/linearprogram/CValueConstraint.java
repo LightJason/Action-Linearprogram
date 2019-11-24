@@ -56,8 +56,8 @@ import java.util.stream.Stream;
  *
  * {@code .math/linearprogram/valueconstaint( LP, [2,5,[7,8,[9]]], "<", 100 );}
  *
- * @see https://en.wikipedia.org/wiki/Linear_programming
- * @see http://commons.apache.org/proper/commons-math/userguide/optimization.html
+ * @see <a href="https://en.wikipedia.org/wiki/Linear_programming"></a>
+ * @see <a href="http://commons.apache.org/proper/commons-math/userguide/optimization.html"></a>
  */
 public final class CValueConstraint extends IConstraint
 {
