@@ -27,9 +27,9 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.math3.optim.linear.LinearConstraint;
 import org.apache.commons.math3.optim.linear.LinearObjectiveFunction;
 import org.apache.commons.math3.optim.linear.Relationship;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.lightjason.agentspeak.language.CRawTerm;
 import org.lightjason.agentspeak.language.ITerm;
 import org.lightjason.agentspeak.language.execution.IContext;
@@ -57,7 +57,7 @@ public final class TestCActionMathLinearprogram extends IBaseTest
     /**
      * initialize
      */
-    @Before
+    @BeforeEach
     public void initialize()
     {
         m_linearprogram = new ImmutablePair<>( new LinearObjectiveFunction( new double[]{}, 0.0 ), new HashSet<LinearConstraint>() );
@@ -79,9 +79,9 @@ public final class TestCActionMathLinearprogram extends IBaseTest
             l_return
         );
 
-        Assert.assertEquals( 1, l_return.size() );
-        Assert.assertNotNull( l_return.get( 0 ).<ImmutablePair<LinearObjectiveFunction, Collection<LinearConstraint>>>raw().getLeft() );
-        Assert.assertTrue( l_return.get( 0 ).<ImmutablePair<LinearObjectiveFunction, Collection<LinearConstraint>>>raw().getRight().isEmpty() );
+        Assertions.assertEquals( 1, l_return.size() );
+        Assertions.assertNotNull( l_return.get( 0 ).<ImmutablePair<LinearObjectiveFunction, Collection<LinearConstraint>>>raw().getLeft() );
+        Assertions.assertTrue( l_return.get( 0 ).<ImmutablePair<LinearObjectiveFunction, Collection<LinearConstraint>>>raw().getRight().isEmpty() );
     }
 
     /**
@@ -96,8 +96,8 @@ public final class TestCActionMathLinearprogram extends IBaseTest
             Collections.emptyList()
         );
 
-        Assert.assertEquals( 1, m_linearprogram.getRight().size() );
-        Assert.assertEquals( 11.0,  m_linearprogram.getRight().iterator().next().getValue(), 0 );
+        Assertions.assertEquals( 1, m_linearprogram.getRight().size() );
+        Assertions.assertEquals( 11.0,  m_linearprogram.getRight().iterator().next().getValue(), 0 );
     }
 
 
@@ -116,8 +116,8 @@ public final class TestCActionMathLinearprogram extends IBaseTest
         );
 
 
-        Assert.assertEquals( m_linearprogram.getRight().size(), 1 );
-        Assert.assertArrayEquals(
+        Assertions.assertEquals( m_linearprogram.getRight().size(), 1 );
+        Assertions.assertArrayEquals(
             Stream.of(
                 m_linearprogram.getRight().iterator().next().getValue(),
                 m_linearprogram.getRight().iterator().next().getRelationship(),
@@ -156,7 +156,7 @@ public final class TestCActionMathLinearprogram extends IBaseTest
             l_return
         );
 
-        Assert.assertArrayEquals(
+        Assertions.assertArrayEquals(
             Stream.of( 12.333333333333332, 2, 2.4047619047619047, 1.0238095238095237 ).toArray(),
             l_return.stream().map( ITerm::raw ).toArray()
         );
@@ -185,7 +185,7 @@ public final class TestCActionMathLinearprogram extends IBaseTest
             l_return
         );
 
-        Assert.assertArrayEquals(
+        Assertions.assertArrayEquals(
             Stream.of( 30.38235294117647, 2, 2.676470588235294, 2.3823529411764706 ).toArray(),
             l_return.stream().map( ITerm::raw ).toArray()
         );
